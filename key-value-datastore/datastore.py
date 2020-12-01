@@ -27,7 +27,7 @@ class DataStore:
 
         except:
             #self.path = client + ".json"
-            self.path = r"C:/Users/krishanth/Documents/data-store/" + client + ".json"
+            self.path = r"C:/data-store/" + client + ".json"
             if os.path.exists(self.path):
                 with open(self.path, 'r') as openfile:
                     self.json_object = json.load(openfile)
