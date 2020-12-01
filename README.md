@@ -13,7 +13,7 @@ Data are stored as key-value paies in JSON files
 $ python main.py [-p <path to store data>] -c <clientName> -o <Operation to be performed> -k <key> -v <value> [-t <time-to-live>]
 ```
 
-> by default the data is stored at C:\Users\krishanth\Documents\data-store
+> by default the data is stored at C:\data-store\
 
 > "client.log" is used to log the file usage
 
