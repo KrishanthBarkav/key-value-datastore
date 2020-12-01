@@ -34,13 +34,7 @@ class DataStore:
         # print(self.path)
 
     def Create(self, key, val, time):
-        now = datetime.now()
-        if time < 60:
-            exp = datetime(now.year, now.month, now.day, now.hour, now.minute, now.second + time)
-        elif time < 3600:
-            exp = datetime(now.year, now.month, now.day, now.hour, now.minute / 60, now.second + (time % 60))
-        else:
-            exp = datetime(now.year, now.month, now.day, now.hour / 3600, now.minute / 60, now.second + (time % 60))
+        exp = datetime.now() + timedelta(seconds=time)
         exp_string = exp.strftime("%H:%M:%S")
         #print(exp_string)
         if len(key) > 32:
